@@ -1,0 +1,124 @@
+{
+  "tests": [
+    {
+      "name": "Testa Matriz Soma",
+      "setup": "",
+      "run": "python -m unittest test.matrix.test_soma",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 8
+    },
+    {
+      "name": "Testa Matriz Norma",
+      "setup": "",
+      "run": "python -m unittest test.matrix.test_norma",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 8
+    },
+    {
+      "name": "Testa Matriz Multiplicacao",
+      "setup": "",
+      "run": "python -m unittest test.matrix.test_multiplicação",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 9
+    },
+    {
+      "name": "Testa Matriz Transposta",
+      "setup": "",
+      "run": "python -m unittest test.matrix.test_transposta",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 9
+    },
+    {
+      "name": "Testa Matriz Simetrica",
+      "setup": "",
+      "run": "python -m unittest test.matrix.test_simétrica",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 9
+    },
+    {
+      "name": "Testa Matriz Multiplicacao por Escalar",
+      "setup": "",
+      "run": "python -m unittest test.matrix.test_multiplicação_por_escalar",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 8
+    },
+    {
+      "name": "Testa Vetor Soma",
+      "setup": "",
+      "run": "python -m unittest test.vector.test_soma",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 8
+    },
+    {
+      "name": "Testa Vetor Multiplicacao por Escalar",
+      "setup": "",
+      "run": "python -m unittest test.vector.test_multiplicação_por_escalar",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 8
+    },
+    {
+      "name": "Testa Vetor Norma",
+      "setup": "",
+      "run": "python -m unittest test.vector.test_norma",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 8
+    },
+    {
+      "name": "Testa Vetor Produto Diadico",
+      "setup": "",
+      "run": "python -m unittest test.vector.test_produto_diádico",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 9
+    },
+    {
+      "name": "Testa Vetor Produto Interno",
+      "setup": "",
+      "run": "python -m unittest test.vector.test_produto_interno",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 8
+    },
+    {
+      "name": "Testa Vetor Produto Vetorial",
+      "setup": "",
+      "run": "python -m unittest test.vector.test_produto_vetorial",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 8
+    }
+  ]
+}
