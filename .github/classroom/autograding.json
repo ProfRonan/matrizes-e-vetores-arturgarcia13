@@ -2,7 +2,7 @@
   "tests": [
     {
       "name": "Testa Matriz Soma",
-      "setup": "",
+      "setup": "sudo -H pip3 install -r requirements.txt",
       "run": "python -m unittest test.matrix.test_soma",
       "input": "",
       "output": "",
@@ -12,7 +12,7 @@
     },
     {
       "name": "Testa Matriz Norma",
-      "setup": "",
+      "setup": "sudo -H pip3 install -r requirements.txt",
       "run": "python -m unittest test.matrix.test_norma",
       "input": "",
       "output": "",
@@ -22,8 +22,8 @@
     },
     {
       "name": "Testa Matriz Multiplicacao",
-      "setup": "",
-      "run": "python -m unittest test.matrix.test_multiplicação",
+      "setup": "sudo -H pip3 install -r requirements.txt",
+      "run": "python -m unittest test.matrix.test_multiplicacao",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -32,7 +32,7 @@
     },
     {
       "name": "Testa Matriz Transposta",
-      "setup": "",
+      "setup": "sudo -H pip3 install -r requirements.txt",
       "run": "python -m unittest test.matrix.test_transposta",
       "input": "",
       "output": "",
@@ -42,8 +42,8 @@
     },
     {
       "name": "Testa Matriz Simetrica",
-      "setup": "",
-      "run": "python -m unittest test.matrix.test_simétrica",
+      "setup": "sudo -H pip3 install -r requirements.txt",
+      "run": "python -m unittest test.matrix.test_simetrica",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -52,8 +52,8 @@
     },
     {
       "name": "Testa Matriz Multiplicacao por Escalar",
-      "setup": "",
-      "run": "python -m unittest test.matrix.test_multiplicação_por_escalar",
+      "setup": "sudo -H pip3 install -r requirements.txt",
+      "run": "python -m unittest test.matrix.test_multiplicacao_por_escalar",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -62,7 +62,7 @@
     },
     {
       "name": "Testa Vetor Soma",
-      "setup": "",
+      "setup": "sudo -H pip3 install -r requirements.txt",
       "run": "python -m unittest test.vector.test_soma",
       "input": "",
       "output": "",
@@ -72,8 +72,8 @@
     },
     {
       "name": "Testa Vetor Multiplicacao por Escalar",
-      "setup": "",
-      "run": "python -m unittest test.vector.test_multiplicação_por_escalar",
+      "setup": "sudo -H pip3 install -r requirements.txt",
+      "run": "python -m unittest test.vector.test_multiplicacao_por_escalar",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -82,7 +82,7 @@
     },
     {
       "name": "Testa Vetor Norma",
-      "setup": "",
+      "setup": "sudo -H pip3 install -r requirements.txt",
       "run": "python -m unittest test.vector.test_norma",
       "input": "",
       "output": "",
@@ -92,8 +92,8 @@
     },
     {
       "name": "Testa Vetor Produto Diadico",
-      "setup": "",
-      "run": "python -m unittest test.vector.test_produto_diádico",
+      "setup": "sudo -H pip3 install -r requirements.txt",
+      "run": "python -m unittest test.vector.test_produto_diadico",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -102,7 +102,7 @@
     },
     {
       "name": "Testa Vetor Produto Interno",
-      "setup": "",
+      "setup": "sudo -H pip3 install -r requirements.txt",
       "run": "python -m unittest test.vector.test_produto_interno",
       "input": "",
       "output": "",
@@ -112,7 +112,7 @@
     },
     {
       "name": "Testa Vetor Produto Vetorial",
-      "setup": "",
+      "setup": "sudo -H pip3 install -r requirements.txt",
       "run": "python -m unittest test.vector.test_produto_vetorial",
       "input": "",
       "output": "",
