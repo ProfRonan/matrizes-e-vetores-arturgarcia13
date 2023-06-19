@@ -119,6 +119,16 @@
       "comparison": "included",
       "timeout": 1,
       "points": 8
+    },
+    {
+      "name": "Formatacao e Linting",
+      "setup": "sudo -H pip3 install -r requirements.txt",
+      "run": "python -m black --check --diff . && python -m isort --profile black --check --diff . && python -m pylint **/*.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
+      "points": null
     }
   ]
 }
