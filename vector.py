@@ -1,30 +1,38 @@
 """Módulo com as funções de manipulação de vetores."""
+from tipos import Vetor, Escalar, Matriz
 
-
-def norma(x: list[float]) -> float | None:
+def norma(x: Vetor) -> Escalar | None:
     """Calcula a norma de um vetor"""
-    # TODO: implementar
-    # a norma de um vetor [3, 4] é 5
-    # a norma de um vetor [1, 2, 4] é 4.58257569495584
-    # ela consiste em calcular a raiz quadrada da soma dos quadrados dos elementos do vetor
-    # se o vetor estiver vazio retorne None
+    if x == []:
+        return None
+    
+    sum = float()
+
+    for ele in x:
+        sum += ele ** 2
+    result = sum**(1 / 2)
+    return result
 
 
-def soma(x: list[float], y: list[float]) -> list[float] | None:
+def soma(x: Vetor, y: Vetor) -> Vetor | None:
     """Soma dois vetores"""
-    # TODO: implementar
-    # a soma de dois vetores [1, 2, 4] + [2, 3, 4] é [3, 5, 8]
-    # a soma só pode ser realizada se os vetores tem a mesma quantidade de elementos.
-    # caso contrário, deve retornar None
+    if len(x) != len(y):
+        return None
+    
+    result = [0 for _ in range(x)]
+
+    for i, ele_x in enumerate(x):
+        result[i] = ele_x + y[i]
 
 
-def multiplicação_por_escalar(vetor: list[float], escalar: float) -> list[float]:
+def multiplicação_por_escalar(vetor: Vetor, escalar: Escalar) -> Vetor:
     """Multiplica um vetor por um escalar"""
     # TODO: implementar
     # a multiplicação de um vetor [1, 2, 4] por um escalar 2 é [2, 4, 8]
+    
 
 
-def produto_interno(x: list[float], y: list[float]) -> float | None:
+def produto_interno(x: Vetor, y: Vetor) -> Escalar | None:
     """Calcula o produto interno de dois vetores"""
     # TODO: implementar
     # o produto interno de dois vetores [1, 2, 4] e [2, 3, 4] é 24
@@ -34,7 +42,7 @@ def produto_interno(x: list[float], y: list[float]) -> float | None:
     # caso os vetores sejam vazios o resultado é 0
 
 
-def produto_vetorial(x: list[float], y: list[float]) -> list[float] | None:
+def produto_vetorial(x: Vetor, y: Vetor) -> Vetor | None:
     """Calcula o produto vetorial de dois vetores"""
     # TODO: implementar
     # o produto vetorial de dois vetores [1, 2, 4] e [2, 3, 4] é [-4, 4, -1]
@@ -42,7 +50,7 @@ def produto_vetorial(x: list[float], y: list[float]) -> list[float] | None:
     # caso contrário, deve retornar None
 
 
-def produto_diádico(x: list[float], y: list[float]) -> list[list[float]] | None:
+def produto_diádico(x: Vetor, y: Vetor) -> Matriz | None:
     """Calcula o produto diádico de dois vetores"""
     # TODO: implementar
     # o produto diádico de dois vetores [1, 2, 4] e [2, 3, 4] é [[2, 3, 4], [4, 6, 8], [8, 12, 16]]

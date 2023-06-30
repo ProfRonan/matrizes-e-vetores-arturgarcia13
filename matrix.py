@@ -1,10 +1,8 @@
 """Módulo com as funções de manipulação de matrizes."""
+from tipos import Matriz, Escalar
 
-
-def soma(x: list[list[float]], y: list[list[float]]) -> list[list[float]] or None:
-    """
-    Soma duas matrizes
-    """
+def soma(x: Matriz, y: Matriz) -> Matriz or None:
+    """Soma duas matrizes"""
     # Testa se as duas matrizes possuem a mesma quantidade de linhas
     if len(x) != len(y):
         return None
@@ -23,9 +21,8 @@ def soma(x: list[list[float]], y: list[list[float]]) -> list[list[float]] or Non
             matriz_res[i][j] = element_x + y[i][j]
     return matriz_res
 
-def multiplicacao_por_escalar(
-    matriz: list[list[float]], escalar: float
-) -> list[list[float]]:
+
+def multiplicacao_por_escalar(matriz: Matriz, escalar: Escalar) -> Matriz:
     """Multiplica uma matriz por um escalar"""
     # Cria uma matriz de reserva
     matriz2 = [[el for el in linha] for linha in matriz]
@@ -34,10 +31,9 @@ def multiplicacao_por_escalar(
         for j, element in enumerate(row):
             matriz2[i][j] = element * escalar
     return matriz2
-    
-def multiplicacao(
-    x: list[list[float]], y: list[list[float]]
-) -> list[list[float]] | None:
+
+
+def multiplicacao(x: Matriz, y: Matriz) -> Matriz | None:
     """Multiplica duas matrizes"""
     # Testa se a matriz x tem o mesmo numero de colunas da matriz y
     if len(x) == 0 or len(y) == 0 or len(x[0]) == 0 or len(y[0]) == 0:
@@ -48,32 +44,35 @@ def multiplicacao(
     # Matriz resultado
     matriz_res = [[0] * len(y[0]) for _ in range(len(x))]
 
+    # Variaveis de controle
+    row_x = len(x)
+    col_x = len(x[0])
+    col_y = len(y[0])
     # Realiza a multiplicação
     # Para cada linha de x
-    for i, row_x in enumerate(x):
-      # Para cada coluna de y
-        for j, col_y in enumerate(y[0]):
+    for i in range(row_x):
+        # Para cada coluna de y
+        for j in range(col_y):
             # Para cada coluna de x
-            for k, col_x in enumerate(x[0]):
+            for k in range(col_x):
                 matriz_res[i][j] += x[i][k] * y[k][j]
     return matriz_res
 
 
-def norma(x: list[list[float]]) -> float:
+def norma(x: Matriz) -> float:
     """Calcula a norma de uma matriz"""
-    if len(x)== [] and len(x[0]) == []:
+    if len(x) == [] and len(x[0]) == []:
         return 0
     soma_quadrados = float()
     for linha in x:
         for ele in linha:
             soma_quadrados += ele**2
-    sqr = soma_quadrados**(1/2)
+    sqr = soma_quadrados ** (1 / 2)
     return sqr
 
-def e_simetrica(x: list[list[float]]) -> bool:
+
+def e_simetrica(x: Matriz) -> bool:
     """Verifica se uma matriz é simétrica"""
-    # TODO: implementar
-    # uma matriz é simétrica se ela é quadrada e se ela é igual a sua transposta
     # Cria o modelo da matriz transposta
     matriz_trans = [[0] * len(x) for _ in range(len(x[0]))]
     # Transfere cada elemento do matriz original para seu lugar na transposta
@@ -88,9 +87,10 @@ def e_simetrica(x: list[list[float]]) -> bool:
                         return False
     return True
 
-def transposta(x: list[list[float]]) -> list[list[float]]:
+
+def transposta(x: Matriz) -> Matriz:
     """Calcula a transposta de uma matriz"""
-    if x == [] :
+    if x == []:
         return []
     # Cria o modelo da matriz transposta
     matriz_trans = [[0] * len(x) for _ in range(len(x[0]))]
