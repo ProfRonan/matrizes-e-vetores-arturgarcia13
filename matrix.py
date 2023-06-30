@@ -23,7 +23,6 @@ def soma(x: list[list[float]], y: list[list[float]]) -> list[list[float]] or Non
             matriz_res[i][j] = element_x + y[i][j]
     return matriz_res
 
-
 def multiplicacao_por_escalar(
     matriz: list[list[float]], escalar: float
 ) -> list[list[float]]:
@@ -35,8 +34,7 @@ def multiplicacao_por_escalar(
         for j, element in enumerate(row):
             matriz2[i][j] = element * escalar
     return matriz2
-
-
+    
 def multiplicacao(
     x: list[list[float]], y: list[list[float]]
 ) -> list[list[float]] | None:
@@ -89,8 +87,6 @@ def e_simetrica(x: list[list[float]]) -> bool:
                     if ele_x != ele_y:
                         return False
     return True
-
-
 
 def transposta(x: list[list[float]]) -> list[list[float]]:
     """Calcula a transposta de uma matriz"""
