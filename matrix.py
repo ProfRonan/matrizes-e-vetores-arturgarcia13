@@ -71,7 +71,7 @@ def norma(x: Matriz) -> float:
     return sqr
 
 
-def e_simetrica(x: Matriz) -> bool:
+def eh_simetrica(x: Matriz) -> bool:
     """Verifica se uma matriz é simétrica"""
     # Cria o modelo da matriz transposta
     matriz_trans = [[0] * len(x) for _ in range(len(x[0]))]
