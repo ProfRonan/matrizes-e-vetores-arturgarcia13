@@ -71,20 +71,23 @@ def norma(x: Matriz) -> float:
     return sqr
 
 
-def e_simetrica(x: Matriz) -> bool:
+def eh_simetrica(x: Matriz) -> bool:
     """Verifica se uma matriz é simétrica"""
+    if x == []:
+        return True
     # Cria o modelo da matriz transposta
-    matriz_trans = [[0] * len(x) for _ in range(len(x[0]))]
-    # Transfere cada elemento do matriz original para seu lugar na transposta
+    matriz_trans = [[0 for _ in range(len(x))] for _ in range(len(x[0]))]
+    # Transfere cada elemento da matriz original para seu lugar na transposta
     for i, row_x in enumerate(x):
         for j, element_x in enumerate(row_x):
             matriz_trans[j][i] = element_x
-    for row_x in x:
-        for row_trans in matriz_trans:
-            for ele_x in row_x:
-                for ele_y in row_trans:
-                    if ele_x != ele_y:
-                        return False
+    # Verifica se os elementos da matriz original são iguais aos correspondentes na transposta
+    len_x = len(x)
+    len_x0 = len(x[0])
+    for i in range(len_x):
+        for j in range(len_x0):
+            if x[i][j] != matriz_trans[i][j]:
+                return False
     return True
 
 
