@@ -21,5 +21,8 @@
     "incompativel",
     "multiplicacao",
     "simetrica"
+  ],
+  "githubPullRequests.ignoredPullRequestBranches": [
+    "main"
   ]
 }
