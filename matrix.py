@@ -1,5 +1,6 @@
 """Módulo com as funções de manipulação de matrizes."""
-from tipos import Matriz, Escalar
+from tipos import Escalar, Matriz
+
 
 def soma(x: Matriz, y: Matriz) -> Matriz or None:
     """Soma duas matrizes"""
