@@ -26,7 +26,7 @@ def soma(x: Matriz, y: Matriz) -> Matriz or None:
 def multiplicacao_por_escalar(matriz: Matriz, escalar: Escalar) -> Matriz:
     """Multiplica uma matriz por um escalar"""
     # Cria uma matriz de reserva
-    matriz2 = [[el for el in linha] for linha in matriz]
+    matriz2 = [list(linha) for linha in matriz]
     # Multiplica cada termo da matriz pelo escalar
     for i, row in enumerate(matriz):
         for j, element in enumerate(row):
